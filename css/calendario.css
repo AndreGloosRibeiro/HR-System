@@ -1,0 +1,28 @@
+/* Adapte conforme necessário para estilizar o calendário */
+.calendario-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+    margin-top: 20px;
+}
+
+.calendario-header {
+    background-color: #ddd;
+    text-align: center;
+    padding: 5px;
+}
+
+.calendario-dia {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 10px;
+}
+
+.dia-trabalho {
+    background-color: #aaffaa; /* Cor para dias de trabalho */
+}
+
+.dia-folga {
+    background-color: #ffaaaa; /* Cor para dias de folga */
+}
+

@@ -1,0 +1,154 @@
+
+.back-button {
+    background-color: transparent; /* Define o fundo do botão como transparente */
+    border: none; /* Remove a borda do botão */
+
+    /* Ajusta o espaçamento e o estilo do texto */
+    padding: 5px;
+    text-decoration: none;
+    color: #ffffff; /* Cor do texto, substitua conforme necessário */
+}
+.back-button:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Define a cor de fundo quando o mouse está sobre o botão */
+}
+.back-button img {
+    width: 50px; /* Define a largura da imagem */
+    height: auto; /* Mantém a proporção da altura */
+    margin-right: 5px; /* Adiciona um pequeno espaçamento à direita da imagem */
+}
+body {
+    padding-top: 20px; /* Adiciona um espaço no topo para a barra de navegação fixa */
+}
+
+.container {
+    position: relative; /* Permite posicionar elementos filhos relativamente a este contêiner */
+}
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    
+}
+
+.container {
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 20px;
+    width: 100%; /* Ajuste para ocupar toda a largura da tela */
+}
+
+h2 {
+    color:  #333;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+input[type="email"],
+input[type="number"],
+select,
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+select {
+    height: 40px;
+}
+
+input[type="submit"] {
+    padding: 15px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Adiciona um espaçamento adicional para o botão de gerar contrato em PDF */
+form:first-child input[type="submit"] {
+    margin-bottom: 20px;
+}
+
+/* Estilo responsivo */
+@media only screen and (max-width: 600px) {
+    form {
+        padding: 10px;
+    }
+
+    label {
+        text-align: left;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+    }
+}
+
+/* Estilo para botões de opção (círculos) */
+input[type="radio"] {
+    display: none; /* Oculta os botões de opção padrão */
+}
+
+/* Estilo personalizado para botões de opção (círculos) */
+label.radio-container {
+    display: inline-block;
+    position: relative;
+    margin-right: 15px;
+}
+
+label.radio-container input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+label.radio-container span {
+    display: inline-block;
+    width: 30px; /* Ajuste conforme necessário */
+    height: 30px; /* Ajuste conforme necessário */
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+}
+
+label.radio-container input[type="radio"]:checked + span {
+    background-color: #4caf50;
+    color: #fff;
+}
